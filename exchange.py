@@ -1,4 +1,4 @@
-import ccxt.asyncio_support as ccxt
+import ccxt.async_support as ccxt
 import logging
 
 logger = logging.getLogger(__name__)
