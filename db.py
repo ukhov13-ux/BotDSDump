@@ -35,8 +35,6 @@ async def init_db():
                 PRIMARY KEY (coin_id, timestamp)
             )
         ''')
-        await conn.execute('CREATE EXTENSION IF NOT EXISTS timescaledb')
-        await conn.execute("SELECT create_hypertable('candles', 'timestamp', if_not_exists => TRUE)")
         await conn.execute('''
             CREATE TABLE IF NOT EXISTS signals (
                 id SERIAL PRIMARY KEY,
